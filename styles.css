@@ -1,0 +1,42 @@
+body {
+    background-image: url('rainbow.jpg') ; /* Replace 'your-image-url.jpg' with the URL or path to your image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Do not repeat the background image */
+    font-family: 'Arial', sans-serif;
+    margin: 0; /* Remove default margin to ensure full width */
+}
+
+.container {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent white for the frosted effect */
+    width: 80%; /* Set the width as a percentage of the viewport width */
+    max-width: 1300px; /* Set a maximum width for the container */
+    height: 700px; /* Set the height in pixels */
+    margin: 20px auto; /* Center the container and add some space around it */
+    padding: 20px; /* Add padding inside the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow for depth */
+    backdrop-filter: blur(10px); /* Apply a blur effect to simulate frosted glass */
+
+}
+
+.container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: inherit; /* Inherit the background color from the container */
+    backdrop-filter: blur(10px); /* Apply the same blur effect to the pseudo-element */
+    pointer-events: none; /* Allow interactions with content behind the pseudo-element */
+    z-index: -1; /* Place the pseudo-element behind the container content */
+
+}
+/* Media query for smaller screens (adjust breakpoints as needed) */
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%; /* Adjust width for smaller screens */
+        height: auto; /* Allow the height to adjust based on content */
+    }
+}
