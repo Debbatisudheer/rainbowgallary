@@ -37,6 +37,6 @@ body {
 @media only screen and (max-width: 768px) {
     .container {
         width: 80%; /* Adjust width for smaller screens */
-        height: 700px; /* Allow the height to adjust based on content */
+        height: 500px; /* Allow the height to adjust based on content */
     }
 }
